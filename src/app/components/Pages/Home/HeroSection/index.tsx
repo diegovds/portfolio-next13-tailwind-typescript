@@ -37,16 +37,11 @@ const HeroSection = () => {
           <h2 className="mt-2 text-4xl font-medium">Diego Viana</h2>
 
           <p className="my-6 text-sm text-gray-400 sm:text-base">
-            Anim in consectetur nulla exercitation consectetur consequat irure
-            exercitation proident reprehenderit veniam ullamco tempor. Veniam
-            commodo enim culpa fugiat et est irure consequat. Occaecat elit non
-            esse amet irure Lorem eiusmod quis eu proident. Sunt Lorem in ea
-            aute proident proident in deserunt duis aliquip veniam labore
-            officia quis. Magna do ad commodo sint tempor. Eiusmod in cupidatat
-            cupidatat mollit occaecat consequat eu aute ut ex tempor
-            reprehenderit irure minim. Adipisicing minim tempor minim anim
-            laboris pariatur cupidatat ad sit ad mollit elit non. Labore
-            deserunt reprehenderit ex occaecat irure in.
+            Olá, meu nome é Gabriel Borges e sou um desenvolvedor front-end
+            apaixonado por tecnologia. Com mais de 2 anos de experiência. Meu
+            objetivo é criar interfaces de usuário bonitas e funcionais, além de
+            liderar equipes técnicas em projetos desafiadores. Estou sempre
+            aberto a novas oportunidades e desafios.
           </p>
 
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">

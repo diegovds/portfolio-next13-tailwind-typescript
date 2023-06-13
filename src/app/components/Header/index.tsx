@@ -25,6 +25,7 @@ const Header = () => {
             height={49}
             src="images/logo.svg"
             alt="Logo Diego Dev"
+            priority
           />
         </Link>
 

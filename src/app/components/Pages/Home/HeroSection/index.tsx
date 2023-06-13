@@ -81,6 +81,7 @@ const HeroSection = () => {
           height={404}
           src="/images/profile-pic.png"
           alt="Foto de peril do Diego Viana"
+          priority
           className="mb-6 h-[300px] w-[300px] rounded-lg object-cover shadow-2xl lg:mb-0 lg:h-[404px] lg:w-[420px]"
         />
       </div>

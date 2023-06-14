@@ -6,7 +6,7 @@ type linkProps = ComponentProps<typeof NextLink>
 
 const Link = ({ className, children, ...props }: linkProps) => {
   return (
-    <Link
+    <NextLink
       className={cn(
         'flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-emerald-500',
         className,
@@ -14,7 +14,7 @@ const Link = ({ className, children, ...props }: linkProps) => {
       {...props}
     >
       {children}
-    </Link>
+    </NextLink>
   )
 }
 

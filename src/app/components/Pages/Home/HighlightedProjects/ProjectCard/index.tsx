@@ -48,7 +48,6 @@ const ProjectCard = () => {
           Ver projeto
           <HiArrowNarrowRight />
         </Link>
-        {/** parei em 14:50 */}
       </div>
     </div>
   )

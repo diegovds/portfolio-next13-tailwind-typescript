@@ -1,5 +1,6 @@
 import { IBM_Plex_Mono, Inter } from 'next/font/google'
 import { ReactNode } from 'react'
+import ContactForm from './components/ContactForm'
 import Header from './components/Header'
 import './globals.css'
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Header />
         {children}
+        <ContactForm />
       </body>
     </html>
   )

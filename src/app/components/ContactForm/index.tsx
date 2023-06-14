@@ -1,0 +1,44 @@
+import { HiArrowNarrowRight } from 'react-icons/hi'
+import Button from '../Button'
+import SectionTitle from '../SectionTitle'
+
+const ContactForm = () => {
+  /**
+   * parei em 6:50
+   */
+  return (
+    <section className="flex items-center justify-center bg-gray-950 px-6 py-16 md:py-32">
+      <div className="mx-auto w-full max-w-[420px]">
+        <SectionTitle
+          subtitle="contato"
+          title="Vamos trabalhar juntos? Entre em contato"
+          className="items-center text-center"
+        />
+
+        <form className="mt-12 flex w-full flex-col gap-4">
+          <input
+            placeholder="Nome"
+            className="focus: h-14 w-full rounded-lg bg-gray-800 p-4 text-gray-50 outline-none ring-emerald-600 placeholder:text-gray-400 focus:ring-2"
+          />
+          <input
+            placeholder="E-mail"
+            type="email"
+            className="focus: h-14 w-full rounded-lg bg-gray-800 p-4 text-gray-50 outline-none ring-emerald-600 placeholder:text-gray-400 focus:ring-2"
+          />
+          <textarea
+            placeholder="Mensagem"
+            className="focus: h-[138px] w-full resize-none rounded-lg bg-gray-800 p-4 text-gray-50 outline-none ring-emerald-600 placeholder:text-gray-400 focus:ring-2 "
+            maxLength={500}
+          />
+
+          <Button className="mx-auto mt-6 w-max shadow-button">
+            Enviar mensagem
+            <HiArrowNarrowRight size={18} />
+          </Button>
+        </form>
+      </div>
+    </section>
+  )
+}
+
+export default ContactForm

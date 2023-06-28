@@ -10,7 +10,7 @@ const ProjectCard = () => {
         <Image
           width={420}
           height={304}
-          src="/images/profile-pic.png"
+          src="https://media.graphassets.com/qSXcz2JdTMOPKlteRZKY"
           alt=""
           className="h-[200px] w-full rounded-lg object-cover sm:h-[300px] lg:min-h-full lg:w-[420px]"
         />

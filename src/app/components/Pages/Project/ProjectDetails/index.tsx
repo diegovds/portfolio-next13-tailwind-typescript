@@ -45,7 +45,7 @@ const ProjectDetails = () => {
         <a href="http://github.com" target="_blank" rel="noopener noreferrer">
           <Button className="min-w-[180px]">
             <FiGlobe size={20} />
-            Projeto online
+            Projeto Online
           </Button>
         </a>
       </div>

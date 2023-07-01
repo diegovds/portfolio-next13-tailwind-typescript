@@ -40,7 +40,7 @@ const Home = async () => {
   return (
     <>
       <HeroSection homeInfo={pageData} />
-      <KnownTechs />
+      <KnownTechs techs={pageData.knownTechs} />
       <HighlightedProjects />
       <WorkExperience />
     </>

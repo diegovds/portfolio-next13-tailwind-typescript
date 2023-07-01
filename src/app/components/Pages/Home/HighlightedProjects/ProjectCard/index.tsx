@@ -1,17 +1,22 @@
 import Link from '@/app/components/Link'
 import TechBadge from '@/app/components/TechBadge'
+import { Project } from '@/types/Projects'
 import Image from 'next/image'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 
-const ProjectCard = () => {
+type ProjectCardProps = {
+  project: Project
+}
+
+const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className="flex flex-col gap-6 lg:flex-row lg:gap-12">
       <div className="h-full w-full">
         <Image
           width={420}
           height={304}
-          src="https://media.graphassets.com/qSXcz2JdTMOPKlteRZKY"
-          alt=""
+          src={project.thumbnail.url}
+          alt={`Thumbnail do projeto ${project.title}`}
           className="h-[200px] w-full rounded-lg object-cover sm:h-[300px] lg:min-h-full lg:w-[420px]"
         />
       </div>
@@ -24,27 +29,18 @@ const ProjectCard = () => {
             src="/images/icons/project-title-icon.svg"
             alt=""
           />
-          BookWise
+          {project.title}
         </h3>
 
-        <p className="my-6 text-gray-400">
-          BookWise é uma plataforma de avaliação de livros que foi desenvolvida
-          durante o bootcamp Ignite da Rocketseat. Com apenas um Figma
-          precisávamos desenvolver essa aplicação completa Full Stack com
-          Next.js.
-        </p>
+        <p className="my-6 text-gray-400">{project.shortDescription}</p>
 
         <div className="mb-8 flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[350px]">
-          <TechBadge name="Next.js" />
-          <TechBadge name="Next.js" />
-          <TechBadge name="Next.js" />
-          <TechBadge name="Next.js" />
-          <TechBadge name="Next.js" />
-          <TechBadge name="Next.js" />
-          <TechBadge name="Next.js" />
+          {project.technologies.map((tech, index) => (
+            <TechBadge name={tech.name} key={index} />
+          ))}
         </div>
 
-        <Link href="/projects/book-wise">
+        <Link href={`/projects/${project.slug}`}>
           Ver projeto
           <HiArrowNarrowRight />
         </Link>

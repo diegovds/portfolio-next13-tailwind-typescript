@@ -29,5 +29,5 @@ export type Project = {
     raw: RichTextContent
   }
   liveProjectUrl?: string
-  gitHubUrl?: string
+  githubUrl?: string
 }

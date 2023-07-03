@@ -1,5 +1,5 @@
 import SectionTitle from '@/app/components/SectionTitle'
-import { WorkExperience as IWorkExperience } from '@/types/workExperience'
+import { WorkExperience as IWorkExperience } from '@/types/WorkExperience'
 import ExperienceItem from './ExperienceItem'
 
 type WorkExperienceProps = {

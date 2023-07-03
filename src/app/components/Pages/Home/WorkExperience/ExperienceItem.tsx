@@ -1,6 +1,6 @@
 import RichText from '@/app/components/RichText'
 import TechBadge from '@/app/components/TechBadge'
-import { WorkExperience } from '@/types/workExperience'
+import { WorkExperience } from '@/types/WorkExperience'
 import { differenceInMonths, differenceInYears, format } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import Image from 'next/image'

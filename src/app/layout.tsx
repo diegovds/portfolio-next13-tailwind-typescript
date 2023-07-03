@@ -6,6 +6,18 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import './globals.css'
 
+export const metadata = {
+  title: {
+    default: 'Home',
+    template: '%s | Diego Dev',
+  },
+  icons: [
+    {
+      url: '/favicon.svg',
+    },
+  ],
+}
+
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],

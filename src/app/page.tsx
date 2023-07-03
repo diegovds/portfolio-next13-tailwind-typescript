@@ -5,6 +5,10 @@ import HighlightedProjects from './components/Pages/Home/HighlightedProjects'
 import KnownTechs from './components/Pages/Home/KnownTechs'
 import WorkExperience from './components/Pages/Home/WorkExperience'
 
+export const metadata = {
+  title: 'Home',
+}
+
 const getPageData = async (): Promise<HomePageData> => {
   const query = `
     query PageInfoQuery {

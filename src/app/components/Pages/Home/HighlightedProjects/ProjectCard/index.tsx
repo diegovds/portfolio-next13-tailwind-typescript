@@ -11,17 +11,17 @@ type ProjectCardProps = {
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className="flex flex-col gap-6 lg:flex-row lg:gap-12">
-      <div className="h-full w-full">
+      <div className="h-[200px] w-full sm:h-[300px] lg:min-h-full lg:w-[420px]">
         <Image
           width={420}
           height={304}
           src={project.thumbnail.url}
           alt={`Thumbnail do projeto ${project.title}`}
-          className="h-[200px] w-full rounded-lg object-cover sm:h-[300px] lg:min-h-full lg:w-[420px]"
+          className="h-full w-full rounded-lg object-cover"
         />
       </div>
 
-      <div>
+      <div className="flex-1 lg:py-[18px]">
         <h3 className="flex items-center gap-3 text-lg font-medium text-gray-50">
           <Image
             width={20}

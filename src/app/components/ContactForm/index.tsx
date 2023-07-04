@@ -1,7 +1,9 @@
 'use client'
 
+import { fadeUpAnimation } from '@/libs/animations'
 import { zodResolver } from '@hookform/resolvers/zod'
 import axios from 'axios'
+import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { toast } from 'react-hot-toast'
 import { HiArrowNarrowRight } from 'react-icons/hi'
@@ -49,8 +51,10 @@ const ContactForm = () => {
           className="items-center text-center"
         />
 
-        <form
+        <motion.form
           className="mt-12 flex w-full flex-col gap-4"
+          {...fadeUpAnimation}
+          transition={{ duration: 0.5 }}
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
@@ -78,7 +82,7 @@ const ContactForm = () => {
             </Button>
             <div className="absolute inset-0 bg-emerald-600 opacity-20 blur-2xl" />
           </div>
-        </form>
+        </motion.form>
       </div>
     </section>
   )

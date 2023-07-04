@@ -5,6 +5,7 @@ import CMSIcon from '@/app/components/CMSIcon'
 import RichText from '@/app/components/RichText'
 import TechBadge from '@/app/components/TechBadge'
 import { HomePageInfo } from '@/types/PageInfo'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 
@@ -23,7 +24,12 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
   return (
     <section className="flex w-full flex-col justify-end bg-hero-image bg-cover bg-center bg-no-repeat py-32 pb-10 sm:pb-32 lg:min-h-[755px] lg:pb-[110px]">
       <div className="container flex flex-col-reverse items-start justify-between lg:flex-row">
-        <div className="w-full lg:max-w-[530px]">
+        <motion.div
+          className="w-full lg:max-w-[530px]"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <p className="font-mono text-emerald-400">Olá, meu nome é</p>
           <h2 className="mt-2 text-4xl font-medium">Diego Viana</h2>
 
@@ -33,7 +39,13 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
 
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
             {homeInfo.technologies.map((tech, index) => (
-              <TechBadge key={index} name={tech.name} />
+              <TechBadge
+                key={index}
+                name={tech.name}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.2, delay: index * 0.1 }}
+              />
             ))}
           </div>
 
@@ -59,16 +71,23 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <Image
-          width={420}
-          height={404}
-          src={homeInfo.profilePicture.url}
-          alt="Foto de perfil do Diego Viana"
-          priority
-          className="mb-6 h-[300px] w-[300px] rounded-lg object-cover shadow-2xl lg:mb-0 lg:h-[404px] lg:w-[420px]"
-        />
+        <motion.div
+          className="origin-center"
+          initial={{ opacity: 0, y: 200, scale: 0.5 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            width={420}
+            height={404}
+            src={homeInfo.profilePicture.url}
+            alt="Foto de perfil do Diego Viana"
+            priority
+            className="mb-6 h-[300px] w-[300px] rounded-lg object-cover shadow-2xl lg:mb-0 lg:h-[404px] lg:w-[420px]"
+          />
+        </motion.div>
       </div>
     </section>
   )

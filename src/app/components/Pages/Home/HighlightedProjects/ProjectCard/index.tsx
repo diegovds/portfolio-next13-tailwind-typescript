@@ -2,6 +2,7 @@
 
 import Link from '@/app/components/Link'
 import TechBadge from '@/app/components/TechBadge'
+import { techBadgeAnimation } from '@/libs/animations'
 import { Project } from '@/types/Projects'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -67,8 +68,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             <TechBadge
               name={tech.name}
               key={index}
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              {...techBadgeAnimation}
               transition={{ duration: 0.2, delay: 0.5 + index * 0.1 }}
             />
           ))}

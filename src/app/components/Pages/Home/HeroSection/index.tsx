@@ -4,6 +4,7 @@ import Button from '@/app/components/Button'
 import CMSIcon from '@/app/components/CMSIcon'
 import RichText from '@/app/components/RichText'
 import TechBadge from '@/app/components/TechBadge'
+import { techBadgeAnimation } from '@/libs/animations'
 import { HomePageInfo } from '@/types/PageInfo'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -42,8 +43,7 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
               <TechBadge
                 key={index}
                 name={tech.name}
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                {...techBadgeAnimation}
                 transition={{ duration: 0.2, delay: index * 0.1 }}
               />
             ))}

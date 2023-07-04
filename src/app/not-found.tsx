@@ -6,6 +6,7 @@ const NotFound = () => {
   return (
     <>
       <title>Página não encontrada | Diego Dev</title>
+      <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
       <div className="flex h-screen flex-col items-center justify-center">
         <h1 className="text-9xl font-bold text-emerald-500">404</h1>
         <h2 className="mb-4 text-3xl font-medium text-gray-400">

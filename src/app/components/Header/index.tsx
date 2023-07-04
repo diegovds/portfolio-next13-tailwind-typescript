@@ -29,7 +29,7 @@ const Header = () => {
           <Image
             width={58}
             height={49}
-            src="images/logo.svg"
+            src="/images/logo.svg"
             alt="Logo Diego Dev"
             priority
           />

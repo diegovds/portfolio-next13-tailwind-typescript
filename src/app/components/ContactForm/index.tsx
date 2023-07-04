@@ -71,13 +71,13 @@ const ContactForm = () => {
             {...register('message')}
           />
 
-          <Button
-            className="mx-auto mt-6 w-max shadow-button"
-            disabled={isSubmitting}
-          >
-            Enviar mensagem
-            <HiArrowNarrowRight size={18} />
-          </Button>
+          <div className="relative mx-auto mt-6 w-max">
+            <Button className="relative z-[2]" disabled={isSubmitting}>
+              Enviar mensagem
+              <HiArrowNarrowRight size={18} />
+            </Button>
+            <div className="absolute inset-0 bg-emerald-600 opacity-20 blur-2xl" />
+          </div>
         </form>
       </div>
     </section>

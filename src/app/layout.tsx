@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { IBM_Plex_Mono, Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import BackToTop from './components/BackToTop'
@@ -6,7 +7,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import './globals.css'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: 'Home',
     template: '%s | Diego Dev',

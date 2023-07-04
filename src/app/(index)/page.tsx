@@ -1,9 +1,9 @@
 import { HomePageData } from '@/types/PageInfo'
 import { fetchHygraphQuery } from '@/utils/fetchHygraphQuery'
-import HeroSection from './components/Pages/Home/HeroSection'
-import HighlightedProjects from './components/Pages/Home/HighlightedProjects'
-import KnownTechs from './components/Pages/Home/KnownTechs'
-import WorkExperience from './components/Pages/Home/WorkExperience'
+import HeroSection from '../components/Pages/Home/HeroSection'
+import HighlightedProjects from '../components/Pages/Home/HighlightedProjects'
+import KnownTechs from '../components/Pages/Home/KnownTechs'
+import WorkExperience from '../components/Pages/Home/WorkExperience'
 
 export const metadata = {
   title: 'Home',

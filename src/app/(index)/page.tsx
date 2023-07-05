@@ -62,7 +62,7 @@ const getPageData = async (): Promise<HomePageData> => {
     }
   `
 
-  return fetchHygraphQuery(query, 60 * 60 * 24)
+  return fetchHygraphQuery(query)
 }
 
 const Home = async () => {
@@ -79,3 +79,5 @@ const Home = async () => {
 }
 
 export default Home
+
+export const revalidate = 60 * 60 * 24 // revalidate this page every 1 day

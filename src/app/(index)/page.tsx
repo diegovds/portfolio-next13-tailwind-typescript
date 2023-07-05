@@ -82,10 +82,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: 'Home',
-    description: `Meu nome é Diego Viana ${pageData.introduction.text.replace(
-      'S',
-      's',
-    )}`,
+    description: `Olá, meu nome é Diego Viana ${pageData.introduction.text
+      .replace(/\\n/g, '')
+      .replace('S', 's')}`,
     openGraph: {
       images: [
         {

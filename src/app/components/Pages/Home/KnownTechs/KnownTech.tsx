@@ -7,10 +7,9 @@ type KnownTechProps = {
 }
 
 const KnownTech = ({ tech }: KnownTechProps) => {
-  const relativeTime = getRelativeTimeString(
-    new Date(tech.startDate),
-    'pt-BR',
-  ).replace('há', '')
+  const relativeTime = tech.startDate
+    ? getRelativeTimeString(new Date(tech.startDate), 'pt-BR').replace('há', '')
+    : undefined
 
   return (
     <div className="flex flex-col gap-2 rounded-lg bg-gray-600/20 p-6 text-gray-500 transition-all hover:bg-gray-600/30 hover:text-emerald-500">
@@ -19,7 +18,7 @@ const KnownTech = ({ tech }: KnownTechProps) => {
         <CMSIcon icon={tech.iconSvg} />
       </div>
 
-      <span>{relativeTime} de experiência</span>
+      {relativeTime && <span>{relativeTime} de experiência</span>}
     </div>
   )
 }

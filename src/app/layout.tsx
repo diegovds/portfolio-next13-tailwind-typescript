@@ -9,6 +9,7 @@ import Toaster from './components/Toaster'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATABASE!),
   title: {
     default: 'Home',
     template: '%s | Diego Dev',

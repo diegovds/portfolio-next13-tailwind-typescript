@@ -1,13 +1,9 @@
 import { HomePageData } from '@/types/PageInfo'
 import { fetchHygraphQuery } from '@/utils/fetchHygraphQuery'
+import { Metadata } from 'next'
 import HeroSection from '../components/Pages/Home/HeroSection'
 import HighlightedProjects from '../components/Pages/Home/HighlightedProjects'
 import KnownTechs from '../components/Pages/Home/KnownTechs'
-import WorkExperience from '../components/Pages/Home/WorkExperience'
-
-export const metadata = {
-  title: 'Home',
-}
 
 const getPageData = async (): Promise<HomePageData> => {
   const query = `
@@ -15,6 +11,7 @@ const getPageData = async (): Promise<HomePageData> => {
       page(where: {slug: "home"}) {
         introduction {
           raw
+          text
         }
         technologies {
           name
@@ -66,18 +63,39 @@ const getPageData = async (): Promise<HomePageData> => {
 }
 
 const Home = async () => {
-  const { page: pageData, workExperiences } = await getPageData()
+  const { page: pageData } = await getPageData()
 
   return (
     <>
       <HeroSection homeInfo={pageData} />
       <KnownTechs techs={pageData.knownTechs} />
       <HighlightedProjects projects={pageData.highlightProjects} />
-      <WorkExperience experiences={workExperiences} />
+      {/** <WorkExperience experiences={workExperiences} /> */}
     </>
   )
 }
 
 export default Home
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { page: pageData } = await getPageData()
+
+  return {
+    title: 'Home',
+    description: `Meu nome é Diego Viana ${pageData.introduction.text.replace(
+      'S',
+      's',
+    )}`,
+    openGraph: {
+      images: [
+        {
+          url: pageData.profilePicture.url,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+  }
+}
 
 export const revalidate = 60 * 60 * 24 // revalidate this page every 1 day

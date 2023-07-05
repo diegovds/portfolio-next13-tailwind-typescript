@@ -20,7 +20,7 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
       thumbnail {
         url
       }
-      sections {
+      sections(first: 100) {
         title
         image {
           url
@@ -32,7 +32,7 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
         raw
         text
       }
-      technologies {
+      technologies(first: 100) {
         name
       }
       liveProjectUrl
@@ -91,4 +91,4 @@ export async function generateMetadata({
   }
 }
 
-export const revalidate = 60 * 30 // revalidate this page every 30 minutes
+export const revalidate = 60 * 60 * 24 // revalidate this page every 1 day

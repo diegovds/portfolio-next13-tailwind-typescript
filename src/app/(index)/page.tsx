@@ -85,15 +85,6 @@ export async function generateMetadata(): Promise<Metadata> {
     description: `Olá, meu nome é Diego Viana ${pageData.introduction.text
       .replace(/\\n/g, '')
       .replace('S', 's')}`,
-    openGraph: {
-      images: [
-        {
-          url: pageData.profilePicture.url,
-          width: 1200,
-          height: 630,
-        },
-      ],
-    },
   }
 }
 

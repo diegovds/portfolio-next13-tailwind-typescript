@@ -19,6 +19,15 @@ export const metadata: Metadata = {
       url: '/favicon.svg',
     },
   ],
+  openGraph: {
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_METADATABASE}/images/icons/project-title-icon.svg`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 }
 
 const inter = Inter({

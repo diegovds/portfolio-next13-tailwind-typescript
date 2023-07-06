@@ -76,9 +76,13 @@ export async function generateMetadata({
   const data = await getProjectDetails(slug)
   const project = data.project
 
+  const description = project.description.text
+    .replace(/\\n/g, '')
+    .replaceAll(String.fromCharCode(8288), '')
+
   return {
     title: project.title,
-    description: project.description.text.replace(/\\n/g, ''),
+    description,
     openGraph: {
       images: [
         {

@@ -41,7 +41,7 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   }
   `
 
-  return fetchHygraphQuery(query)
+  return fetchHygraphQuery(query, 60 * 60 * 24)
 }
 
 const Project = async ({ params: { slug } }: ProjectProps) => {
@@ -94,5 +94,3 @@ export async function generateMetadata({
     },
   }
 }
-
-export const revalidate = 60 * 60 * 24 // revalidate this page every 1 day

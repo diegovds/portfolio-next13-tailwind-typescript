@@ -6,9 +6,9 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 type ProjectProps = {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
@@ -46,9 +46,7 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
 }
 
 export default async function Project(props: ProjectProps) {
-  const { params } = props
-  const { slug } = params
-
+  const { slug } = await props.params // ⬅️ await aqui
   const data = await getProjectDetails(slug)
 
   if (!data?.project) notFound()
@@ -79,9 +77,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(props: ProjectProps): Promise<Metadata> {
-  const { params } = props
-  const { slug } = params
-
+  const { slug } = await props.params // ⬅️ await aqui também
   const data = await getProjectDetails(slug)
 
   if (!data?.project) {

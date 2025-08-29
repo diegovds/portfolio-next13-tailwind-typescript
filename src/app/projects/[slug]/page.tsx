@@ -3,7 +3,6 @@ import ProjectSections from '@/app/components/Pages/Project/ProjectSections'
 import { ProjectPageData, ProjectsPageStaticData } from '@/types/PageInfo'
 import { fetchHygraphQuery } from '@/utils/fetchHygraphQuery'
 import { Metadata } from 'next'
-import { notFound } from 'next/navigation'; // Next 15: para 404 dinâmico
 
 type ProjectProps = {
   params: {
@@ -45,14 +44,8 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   return fetchHygraphQuery(query, 60 * 60 * 24)
 }
 
-export default async function Project({ params: { slug } }: ProjectProps) {
-  const data = await getProjectDetails(slug)
-
-  if (!data?.project) {
-    notFound()
-  }
-
-  const { project } = data
+const Project = async ({ params: { slug } }: ProjectProps) => {
+  const { project } = await getProjectDetails(slug)
 
   return (
     <>
@@ -62,7 +55,7 @@ export default async function Project({ params: { slug } }: ProjectProps) {
   )
 }
 
-export const dynamicParams = true
+export default Project
 
 export async function generateStaticParams() {
   const query = `
@@ -74,22 +67,15 @@ export async function generateStaticParams() {
   `
   const { projects } = await fetchHygraphQuery<ProjectsPageStaticData>(query)
 
-  return projects.map(({ slug }) => ({ slug }))
+  return projects
 }
 
-export async function generateMetadata(
-  { params: { slug } }: ProjectProps
-): Promise<Metadata> {
+export async function generateMetadata({
+  params: { slug },
+}: ProjectProps): Promise<Metadata> {
   const data = await getProjectDetails(slug)
-
-  if (!data?.project) {
-    return {
-      title: 'Project not found',
-      description: '',
-    }
-  }
-
   const project = data.project
+
   const description = project.description.text
     .replace(/\\n/g, '')
     .replaceAll(String.fromCharCode(8288), '')

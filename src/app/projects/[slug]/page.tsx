@@ -3,7 +3,7 @@ import ProjectSections from '@/app/components/Pages/Project/ProjectSections'
 import { ProjectPageData, ProjectsPageStaticData } from '@/types/PageInfo'
 import { fetchHygraphQuery } from '@/utils/fetchHygraphQuery'
 import { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound } from 'next/navigation'; // Next 15: para 404 dinâmico
 
 type ProjectProps = {
   params: {
@@ -45,13 +45,12 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   return fetchHygraphQuery(query, 60 * 60 * 24)
 }
 
-export default async function Project(props: ProjectProps) {
-  const { params } = props
-  const { slug } = params
-
+export default async function Project({ params: { slug } }: ProjectProps) {
   const data = await getProjectDetails(slug)
 
-  if (!data?.project) notFound()
+  if (!data?.project) {
+    notFound()
+  }
 
   const { project } = data
 
@@ -78,10 +77,9 @@ export async function generateStaticParams() {
   return projects.map(({ slug }) => ({ slug }))
 }
 
-export async function generateMetadata(props: ProjectProps): Promise<Metadata> {
-  const { params } = props
-  const { slug } = params
-
+export async function generateMetadata(
+  { params: { slug } }: ProjectProps
+): Promise<Metadata> {
   const data = await getProjectDetails(slug)
 
   if (!data?.project) {

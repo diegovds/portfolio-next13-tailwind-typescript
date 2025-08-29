@@ -17,6 +17,7 @@ const getPageData = async (): Promise<ProjectsPageData> => {
         shortDescription
         slug
         title
+        order
         thumbnail {
           url
         }

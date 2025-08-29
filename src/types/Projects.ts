@@ -31,5 +31,4 @@ export type Project = {
   }
   liveProjectUrl?: string
   githubUrl?: string
-  order: number
 }

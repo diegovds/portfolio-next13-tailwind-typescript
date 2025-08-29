@@ -6,9 +6,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 type ProjectProps = {
-  params: Promise<{
-    slug: string
-  }>
+  params: Promise<{ slug: string }>
 }
 
 const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
@@ -45,8 +43,8 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   return fetchHygraphQuery(query, 60 * 60 * 24)
 }
 
-export default async function Project(props: ProjectProps) {
-  const { slug } = await props.params // ⬅️ await aqui
+export default async function ProjectPage({ params }: ProjectProps) {
+  const { slug } = await params
   const data = await getProjectDetails(slug)
 
   if (!data?.project) notFound()
@@ -61,8 +59,6 @@ export default async function Project(props: ProjectProps) {
   )
 }
 
-export const dynamicParams = true
-
 export async function generateStaticParams() {
   const query = `
     query ProjectsSlugsQuery() {
@@ -73,11 +69,15 @@ export async function generateStaticParams() {
   `
   const { projects } = await fetchHygraphQuery<ProjectsPageStaticData>(query)
 
-  return projects.map(({ slug }) => ({ slug }))
+  return projects.map(({ slug }) => ({
+    slug,
+  }))
 }
 
-export async function generateMetadata(props: ProjectProps): Promise<Metadata> {
-  const { slug } = await props.params // ⬅️ await aqui também
+export async function generateMetadata({
+  params,
+}: ProjectProps): Promise<Metadata> {
+  const slug = (await params).slug
   const data = await getProjectDetails(slug)
 
   if (!data?.project) {

@@ -47,7 +47,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           </Link>
 
           <SectionTitle
-            subtitle="projeto"
+            subtitle="projetos"
             title={title}
             className="[&>h3]:text-5xl"
           />

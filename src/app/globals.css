@@ -3,13 +3,47 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-gray-900 text-gray-100;
+    @apply bg-neutral-950 text-zinc-100 antialiased;
+    background: radial-gradient(
+        circle at top left,
+        rgba(39, 39, 42, 0.72),
+        transparent 34rem
+      ),
+      radial-gradient(
+        circle at bottom right,
+        rgba(20, 83, 45, 0.18),
+        transparent 28rem
+      ),
+      #030303;
+  }
+
+  body::before {
+    content: '';
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    opacity: 0.035;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.9) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.9) 1px, transparent 1px);
+    background-size: 44px 44px;
   }
 }
 
 .container {
-  @apply mx-auto w-full max-w-[1200px] px-6;
+  @apply mx-auto w-full max-w-[1180px] px-5 sm:px-6;
 }
 
 *::-webkit-scrollbar {
@@ -17,11 +51,11 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #374151;
+  background: #18181b;
   border-radius: 5px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #10b981;
+  background-color: #52525b;
   border-radius: 14px;
 }

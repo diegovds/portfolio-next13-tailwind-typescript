@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { IBM_Plex_Mono, Inter } from 'next/font/google'
+import { IBM_Plex_Mono, Sora } from 'next/font/google'
 import { ReactNode } from 'react'
 import BackToTop from './components/BackToTop'
 import ContactForm from './components/ContactForm'
@@ -30,9 +30,10 @@ export const metadata: Metadata = {
   },
 }
 
-const inter = Inter({
-  variable: '--font-inter',
+const sora = Sora({
+  variable: '--font-sora',
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
 })
 
 const plexMono = IBM_Plex_Mono({
@@ -43,7 +44,7 @@ const plexMono = IBM_Plex_Mono({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
+    <html lang="pt-BR" className={`${sora.variable} ${plexMono.variable}`}>
       <body>
         <Toaster />
         <BackToTop />

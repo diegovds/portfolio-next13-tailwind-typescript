@@ -42,45 +42,46 @@ const ContactForm = () => {
   return (
     <section
       id="contact"
-      className="flex items-center justify-center bg-gray-950 px-6 py-16 md:py-32"
+      className="relative flex items-center justify-center overflow-hidden border-t border-white/10 bg-neutral-950 px-6 py-20 md:py-32"
     >
-      <div className="mx-auto w-full max-w-[420px]">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-zinc-500/40 to-transparent" />
+      <div className="mx-auto grid w-full max-w-5xl items-start gap-10 md:grid-cols-[0.9fr_1.1fr]">
         <SectionTitle
           subtitle="contato"
           title="Vamos trabalhar juntos? Entre em contato"
-          className="items-center text-center"
+          className="md:sticky md:top-28"
         />
 
         <motion.form
-          className="mt-12 flex w-full flex-col gap-4"
+          className="bg-zinc-900/45 flex w-full flex-col gap-4 rounded-lg border border-white/10 p-4 shadow-2xl shadow-black/30 backdrop-blur sm:p-6"
           {...fadeUpAnimation}
           transition={{ duration: 0.5 }}
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
             placeholder="Nome"
-            className="focus: h-14 w-full rounded-lg bg-gray-800 p-4 text-gray-50 outline-none ring-emerald-600 placeholder:text-gray-400 focus:ring-2"
+            className="h-14 w-full rounded-md border border-white/10 bg-neutral-950/80 p-4 text-zinc-50 outline-none ring-zinc-500 transition-all placeholder:text-zinc-600 focus:border-zinc-500 focus:ring-2"
             {...register('name')}
           />
           <input
             placeholder="E-mail"
             type="email"
-            className="focus: h-14 w-full rounded-lg bg-gray-800 p-4 text-gray-50 outline-none ring-emerald-600 placeholder:text-gray-400 focus:ring-2"
+            className="h-14 w-full rounded-md border border-white/10 bg-neutral-950/80 p-4 text-zinc-50 outline-none ring-zinc-500 transition-all placeholder:text-zinc-600 focus:border-zinc-500 focus:ring-2"
             {...register('email')}
           />
           <textarea
             placeholder="Mensagem"
-            className="focus: h-[138px] w-full resize-none rounded-lg bg-gray-800 p-4 text-gray-50 outline-none ring-emerald-600 placeholder:text-gray-400 focus:ring-2 "
+            className="h-[150px] w-full resize-none rounded-md border border-white/10 bg-neutral-950/80 p-4 text-zinc-50 outline-none ring-zinc-500 transition-all placeholder:text-zinc-600 focus:border-zinc-500 focus:ring-2"
             maxLength={500}
             {...register('message')}
           />
 
-          <div className="relative mx-auto mt-6 w-max">
+          <div className="relative mt-4 w-max">
             <Button className="relative z-[2]" disabled={isSubmitting}>
               Enviar mensagem
               <HiArrowNarrowRight size={18} />
             </Button>
-            <div className="absolute inset-0 bg-emerald-600 opacity-20 blur-2xl" />
+            <div className="absolute inset-0 bg-white opacity-10 blur-2xl" />
           </div>
         </motion.form>
       </div>

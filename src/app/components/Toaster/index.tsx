@@ -9,22 +9,24 @@ const Toaster = () => {
       toastOptions={{
         success: {
           style: {
-            background: '#10b981',
-            color: '#fff',
+            background: '#18181b',
+            border: '1px solid rgba(255,255,255,0.12)',
+            color: '#fafafa',
           },
           iconTheme: {
-            primary: '#fff',
-            secondary: '#10b981',
+            primary: '#fafafa',
+            secondary: '#18181b',
           },
         },
         error: {
           style: {
-            background: '#ef4444',
-            color: '#fff',
+            background: '#18181b',
+            border: '1px solid rgba(248,113,113,0.35)',
+            color: '#fafafa',
           },
           iconTheme: {
-            primary: '#fff',
-            secondary: '#ef4444',
+            primary: '#f87171',
+            secondary: '#18181b',
           },
         },
       }}

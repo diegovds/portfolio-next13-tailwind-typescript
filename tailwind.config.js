@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['var(--font-inter)', 'sans-serif'],
+      sans: ['var(--font-sora)', 'sans-serif'],
     },
     extend: {
       backgroundImage: {

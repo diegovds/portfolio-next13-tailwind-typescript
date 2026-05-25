@@ -16,11 +16,14 @@ const NavItem = ({ label, href }: NavItemProps) => {
     <Link
       href={href}
       className={cn(
-        'flex items-center gap-2 font-mono font-medium text-gray-400',
-        isActive && 'text-gray-50',
+        'flex items-center gap-2 rounded-full px-3 py-2 font-mono text-xs font-medium text-zinc-400 transition-all hover:bg-white/5 hover:text-zinc-100 sm:px-4 sm:text-sm',
+        isActive &&
+          'bg-zinc-100 text-zinc-950 shadow-lg shadow-white/10 hover:bg-zinc-100 hover:text-zinc-950',
       )}
     >
-      <span className="text-emerald-400">#</span>
+      <span className={cn('text-zinc-600', isActive && 'text-zinc-500')}>
+        #
+      </span>
       {label}
     </Link>
   )

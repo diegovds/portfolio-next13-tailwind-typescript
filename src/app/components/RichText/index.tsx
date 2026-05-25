@@ -9,17 +9,17 @@ const RichText = ({ ...props }: RichTextProps) => {
       {...props}
       renderers={{
         bold: ({ children }) => (
-          <b className="font-medium text-gray-50">{children}</b>
+          <b className="font-semibold text-zinc-50">{children}</b>
         ),
         ul: ({ children }) => (
-          <ul className="flex list-inside list-disc flex-col gap-1 pl-2">
+          <ul className="flex list-inside list-disc flex-col gap-1 pl-2 text-zinc-400">
             {children}
           </ul>
         ),
         a: ({ children, ...props }) => (
           <a
             {...props}
-            className="underline transition-colors hover:text-emerald-500"
+            className="text-zinc-100 underline decoration-zinc-600 underline-offset-4 transition-colors hover:text-white hover:decoration-white"
           >
             {children}
           </a>

@@ -1,6 +1,7 @@
 'use client'
 
 import SectionTitle from '@/app/components/SectionTitle'
+import HorizonalDivider from '@/app/components/Divider/HorizonalDivider'
 import { KnownTech as IKnownTech } from '@/types/Projects'
 import { motion } from 'framer-motion'
 import KnownTech from './KnownTech'
@@ -11,7 +12,7 @@ type KnownTechsProps = {
 
 const KnownTechs = ({ techs }: KnownTechsProps) => {
   return (
-    <section className="container py-20 md:py-28">
+    <section className="container pb-0 pt-20 md:pt-28">
       <SectionTitle subtitle="competências" title="Conhecimentos" />
       <div className="mt-12 grid w-full auto-rows-fr grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-3">
         {techs?.map((tech, i) => (
@@ -27,6 +28,7 @@ const KnownTechs = ({ techs }: KnownTechsProps) => {
           </motion.div>
         ))}
       </div>
+      <HorizonalDivider className="mb-0 mt-12" />
     </section>
   )
 }

@@ -11,7 +11,7 @@ type HighlightedProjectsProps = {
 
 const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
   return (
-    <section className="container py-20 md:py-28">
+    <section className="container pb-20 pt-12 md:pb-28">
       <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <SectionTitle subtitle="destaques" title="Projetos em destaque" />
         <Link

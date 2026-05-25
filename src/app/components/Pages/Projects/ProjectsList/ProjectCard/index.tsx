@@ -9,7 +9,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const technologies = project.technologies.map((x) => x.name).join(', ')
 
   return (
-    <div className="bg-zinc-900/45 group flex h-[460px] flex-col overflow-hidden rounded-lg border border-white/10 shadow-xl shadow-black/20 transition-all hover:-translate-y-1 hover:border-zinc-500/60 hover:bg-zinc-900/80">
+    <div className="group flex h-[460px] flex-col overflow-hidden rounded-lg border border-white/10 bg-[linear-gradient(145deg,rgba(39,39,42,0.82),rgba(9,9,11,0.92))] shadow-xl shadow-black/25 transition-all hover:-translate-y-1 hover:border-zinc-400/50 hover:shadow-2xl hover:shadow-black/40">
       <div className="h-52 w-full overflow-hidden border-b border-white/10 bg-neutral-950">
         <Image
           width={380}
@@ -17,7 +17,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           src={project.thumbnail.url}
           alt={`Thumbnail do projeto ${project.title}`}
           unoptimized
-          className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+          className="saturate-110 h-full w-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:saturate-150"
         />
       </div>
 

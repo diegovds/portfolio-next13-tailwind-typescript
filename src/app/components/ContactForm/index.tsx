@@ -53,7 +53,7 @@ const ContactForm = () => {
         />
 
         <motion.form
-          className="bg-zinc-900/45 flex w-full flex-col gap-4 rounded-lg border border-white/10 p-4 shadow-2xl shadow-black/30 backdrop-blur sm:p-6"
+          className="flex w-full flex-col gap-4 rounded-lg border border-white/10 bg-[linear-gradient(145deg,rgba(39,39,42,0.72),rgba(3,7,18,0.82))] p-4 shadow-2xl shadow-black/30 backdrop-blur sm:p-6"
           {...fadeUpAnimation}
           transition={{ duration: 0.5 }}
           onSubmit={handleSubmit(onSubmit)}

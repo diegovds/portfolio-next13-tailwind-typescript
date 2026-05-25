@@ -7,7 +7,6 @@ import TechBadge from '@/app/components/TechBadge'
 import { techBadgeAnimation } from '@/libs/animations'
 import { HomePageInfo } from '@/types/PageInfo'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 
 type HomeSectionProps = {
@@ -24,8 +23,8 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
 
   return (
     <section className="relative flex w-full flex-col justify-end overflow-hidden border-b border-white/10 pb-14 pt-32 sm:pb-24 lg:min-h-[760px] lg:pt-40">
-      <div className="absolute inset-0 bg-hero-image bg-cover bg-center bg-no-repeat opacity-20" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_24%,rgba(113,113,122,0.24),transparent_28rem)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(3,7,18,0.94),rgba(9,9,11,0.82)_48%,rgba(30,41,59,0.7))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(148,163,184,0.26),transparent_25rem),radial-gradient(circle_at_18%_75%,rgba(100,116,139,0.14),transparent_24rem)]" />
 
       <div className="container relative z-[1] grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div
@@ -78,20 +77,49 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
         </motion.div>
 
         <motion.div
-          className="relative order-first mx-auto w-full max-w-[420px] origin-center lg:order-none lg:mx-0 lg:justify-self-end"
+          className="relative order-first mx-auto w-full max-w-[430px] origin-center lg:order-none lg:mx-0 lg:justify-self-end"
           initial={{ opacity: 0, y: 200, scale: 0.5 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute -inset-4 rounded-2xl border border-white/10 bg-zinc-900/30 shadow-2xl shadow-black/40" />
-          <Image
-            width={420}
-            height={404}
-            src={homeInfo.profilePicture.url}
-            alt="Foto de perfil do Diego Viana"
-            priority
-            className="relative h-[320px] w-full rounded-lg border border-white/10 object-cover grayscale transition-all duration-500 hover:grayscale-0 lg:h-[440px]"
-          />
+          <div className="absolute -inset-5 rounded-2xl bg-[radial-gradient(circle_at_top_right,rgba(148,163,184,0.28),transparent_16rem)] blur-xl" />
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[linear-gradient(135deg,rgba(39,39,42,0.88),rgba(3,7,18,0.92)_52%,rgba(15,23,42,0.86))] p-6 shadow-2xl shadow-black/50">
+            <div className="via-white/35 absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent" />
+            <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-slate-200/10 blur-3xl" />
+            <div className="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-slate-300/10 blur-3xl" />
+
+            <div className="relative flex min-h-[340px] flex-col justify-between lg:min-h-[440px]">
+              <div className="flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs text-zinc-500">
+                <span>portfolio.tsx</span>
+                <span>2026</span>
+              </div>
+
+              <div className="py-10">
+                <p className="font-mono text-sm text-slate-300/70">
+                  const developer =
+                </p>
+                <strong className="mt-4 block text-[6.5rem] font-semibold leading-none tracking-normal text-zinc-50 sm:text-[8rem]">
+                  DV
+                </strong>
+                <div className="mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-zinc-100 via-slate-300 to-slate-500" />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
+                  <span className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-500">
+                    foco
+                  </span>
+                  <p className="mt-2 text-sm text-zinc-200">interfaces</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
+                  <span className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-500">
+                    stack
+                  </span>
+                  <p className="mt-2 text-sm text-zinc-200">web apps</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

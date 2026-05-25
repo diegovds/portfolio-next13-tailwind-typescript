@@ -27,7 +27,7 @@ const ProjectSections = ({ sections }: ProjectSectionsProps) => {
               {section.title}
             </h2>
           </div>
-          <div className="bg-zinc-900/45 overflow-hidden rounded-lg border border-white/10 p-2 shadow-2xl shadow-black/30">
+          <div className="overflow-hidden rounded-lg border border-white/10 bg-[linear-gradient(145deg,rgba(39,39,42,0.76),rgba(3,7,18,0.84))] p-2 shadow-2xl shadow-black/30">
             <Image
               src={section.image.url}
               width={1080}

@@ -10,14 +10,11 @@ module.exports = {
       sans: ['var(--font-sora)', 'sans-serif'],
     },
     extend: {
-      backgroundImage: {
-        'hero-image': "url('/images/hero-bg.png')",
-      },
       fontFamily: {
         mono: ['var(--font-plex-mono)', 'monospace'],
       },
       boxShadow: {
-        button: '0px 0px 68px 7px rgba(5, 150, 105, 0.4)',
+        button: '0px 0px 68px 7px rgba(148, 163, 184, 0.22)',
       },
     },
   },

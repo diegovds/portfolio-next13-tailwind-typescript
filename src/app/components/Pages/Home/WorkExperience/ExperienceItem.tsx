@@ -59,7 +59,7 @@ const ExperienceItem = ({ experience }: ExperienceItemProps) => {
             height={40}
             src={companyLogo.url}
             alt={`Logo da empresa ${companyName}`}
-            className="rounded-full grayscale"
+            className="rounded-full"
           />
         </div>
         <div className="h-full w-px bg-white/10" />

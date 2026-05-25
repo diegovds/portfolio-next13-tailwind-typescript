@@ -21,7 +21,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       transition={{ duration: 0.5 }}
     >
       <motion.div
-        className="group h-[220px] w-full overflow-hidden rounded-lg border border-white/10 bg-zinc-900 sm:h-[320px] lg:min-h-full"
+        className="group h-[220px] w-full overflow-hidden rounded-lg border border-white/10 bg-zinc-900 shadow-2xl shadow-black/30 sm:h-[320px] lg:min-h-full"
         initial={{ opacity: 0, y: 100, scale: 0.5 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.3, delay: 0.3 }}
@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           height={304}
           src={project.thumbnail.url}
           alt={`Thumbnail do projeto ${project.title}`}
-          className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+          className="saturate-110 h-full w-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:saturate-150"
         />
       </motion.div>
 

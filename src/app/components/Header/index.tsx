@@ -19,7 +19,7 @@ const NAV_ITEMS = [
 const Header = () => {
   return (
     <motion.header
-      className="fixed top-0 z-30 flex h-20 w-full items-center justify-center border-b border-white/10 bg-neutral-950/70 backdrop-blur-xl"
+      className="bg-neutral-950/55 fixed top-0 z-30 flex h-20 w-full items-center justify-center border-b border-white/10 backdrop-blur-xl"
       initial={{ top: -100 }}
       animate={{ top: 0 }}
       transition={{ duration: 0.5 }}
@@ -36,7 +36,7 @@ const Header = () => {
           />
         </Link>
 
-        <nav className="flex items-center gap-2 rounded-full border border-white/10 bg-zinc-900/70 p-1 shadow-2xl shadow-black/30 sm:gap-1">
+        <nav className="flex items-center gap-2 rounded-full border border-white/10 bg-[linear-gradient(135deg,rgba(39,39,42,0.82),rgba(9,9,11,0.72))] p-1 shadow-2xl shadow-black/30 sm:gap-1">
           {NAV_ITEMS.map((item, index) => (
             <NavItem key={index} {...item} />
           ))}

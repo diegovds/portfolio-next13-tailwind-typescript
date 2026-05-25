@@ -1,7 +1,6 @@
 'use client'
 
 import SectionTitle from '@/app/components/SectionTitle'
-import HorizonalDivider from '@/app/components/Divider/HorizonalDivider'
 import { KnownTech as IKnownTech } from '@/types/Projects'
 import { motion } from 'framer-motion'
 import KnownTech from './KnownTech'
@@ -28,7 +27,6 @@ const KnownTechs = ({ techs }: KnownTechsProps) => {
           </motion.div>
         ))}
       </div>
-      <HorizonalDivider className="mb-0 mt-12" />
     </section>
   )
 }

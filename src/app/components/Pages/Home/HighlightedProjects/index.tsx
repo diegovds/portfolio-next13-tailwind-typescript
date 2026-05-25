@@ -12,7 +12,7 @@ type HighlightedProjectsProps = {
 const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
   return (
     <section className="container pb-20 pt-12 md:pb-28">
-      <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+      <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <SectionTitle subtitle="destaques" title="Projetos em destaque" />
         <Link
           href="/projects"
@@ -22,7 +22,6 @@ const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
           <HiArrowNarrowRight />
         </Link>
       </div>
-      <HorizonalDivider className="mb-12" />
 
       <div>
         {projects?.map((project, index) => (

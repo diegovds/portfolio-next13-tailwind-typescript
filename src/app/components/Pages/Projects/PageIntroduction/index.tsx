@@ -8,7 +8,6 @@ import { HiArrowNarrowLeft } from 'react-icons/hi'
 const PageIntroduction = () => {
   return (
     <section className="relative flex min-h-[520px] w-full flex-col items-center justify-center overflow-hidden border-b border-white/10 px-5 pt-24 lg:min-h-[620px]">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(3,7,18,0.96),rgba(9,9,11,0.84)_48%,rgba(30,41,59,0.72))]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(148,163,184,0.22),transparent_30rem)]" />
 
       <div className="relative z-[1] flex flex-col items-center">

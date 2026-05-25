@@ -23,8 +23,7 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
 
   return (
     <section className="relative flex w-full flex-col justify-end overflow-hidden border-b border-white/10 pb-14 pt-32 sm:pb-24 lg:min-h-[760px] lg:pt-40">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(3,7,18,0.94),rgba(9,9,11,0.82)_48%,rgba(30,41,59,0.7))]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(148,163,184,0.26),transparent_25rem),radial-gradient(circle_at_18%_75%,rgba(100,116,139,0.14),transparent_24rem)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(148,163,184,0.22),transparent_25rem),radial-gradient(circle_at_18%_75%,rgba(100,116,139,0.1),transparent_24rem)]" />
 
       <div className="container relative z-[1] grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div

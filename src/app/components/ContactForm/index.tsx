@@ -42,7 +42,7 @@ const ContactForm = () => {
   return (
     <section
       id="contact"
-      className="relative flex items-center justify-center overflow-hidden border-t border-white/10 bg-neutral-950 px-6 py-20 md:py-32"
+      className="relative flex items-center justify-center overflow-hidden border-t border-white/10 px-6 py-20 md:py-32"
     >
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-zinc-500/40 to-transparent" />
       <div className="mx-auto grid w-full max-w-5xl items-start gap-10 md:grid-cols-[0.9fr_1.1fr]">

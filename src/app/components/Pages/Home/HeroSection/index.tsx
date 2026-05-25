@@ -127,9 +127,9 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
                 <div className="grid gap-4 sm:grid-cols-[1fr_0.78fr]">
                   <div className="rounded-xl border border-white/10 bg-neutral-950/70 p-4 font-mono text-xs shadow-xl shadow-black/20">
                     <p className="text-zinc-600">const craft = {'{'}</p>
-                    <p className="pl-4 text-zinc-300">motion: 'subtle',</p>
-                    <p className="pl-4 text-zinc-400">theme: 'dark',</p>
-                    <p className="pl-4 text-zinc-500">detail: 'sharp'</p>
+                    <p className="pl-4 text-zinc-300">motion: subtle,</p>
+                    <p className="pl-4 text-zinc-400">theme: dark,</p>
+                    <p className="pl-4 text-zinc-500">detail: sharp</p>
                     <p className="text-zinc-600">{'}'}</p>
                   </div>
 

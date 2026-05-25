@@ -11,34 +11,39 @@ type ProjectSectionsProps = {
 
 const ProjectSections = ({ sections }: ProjectSectionsProps) => {
   return (
-    <section className="container my-16 flex flex-col gap-12 md:my-28 md:gap-24">
-      {sections.map((section, index) => (
-        <motion.div
-          key={index}
-          className="flex flex-col gap-6 md:gap-8"
-          {...fadeUpAnimation}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="flex items-center gap-4">
-            <span className="font-mono text-xs text-zinc-600">
-              {String(index + 1).padStart(2, '0')}
-            </span>
-            <h2 className="text-2xl font-semibold text-zinc-200 md:text-3xl">
-              {section.title}
-            </h2>
-          </div>
-          <div className="overflow-hidden rounded-lg border border-white/10 bg-[linear-gradient(145deg,rgba(39,39,42,0.76),rgba(3,7,18,0.84))] p-2 shadow-2xl shadow-black/30">
-            <Image
-              src={section.image.url}
-              width={1080}
-              height={672}
-              className="aspect-auto w-full rounded-md object-cover"
-              alt={`Imagem da sessão ${section.title}`}
-              unoptimized
-            />
-          </div>
-        </motion.div>
-      ))}
+    <section className="container py-16 md:py-24">
+      <div className="flex flex-col gap-12 md:gap-20">
+        {sections.map((section, index) => (
+          <motion.article
+            key={index}
+            className="grid gap-5 md:gap-7"
+            {...fadeUpAnimation}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="flex items-end justify-between gap-4 border-b border-white/10 pb-4">
+              <div className="flex items-center gap-4">
+                <span className="font-mono text-xs text-zinc-600">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h2 className="text-2xl font-semibold text-zinc-200 md:text-3xl">
+                  {section.title}
+                </h2>
+              </div>
+            </div>
+
+            <div className="bg-zinc-950/45 overflow-hidden rounded-2xl border border-white/10 p-2 shadow-2xl shadow-black/25">
+              <Image
+                src={section.image.url}
+                width={1080}
+                height={672}
+                className="saturate-110 aspect-auto w-full rounded-xl object-cover"
+                alt={`Imagem da seção ${section.title}`}
+                unoptimized
+              />
+            </div>
+          </motion.article>
+        ))}
+      </div>
     </section>
   )
 }

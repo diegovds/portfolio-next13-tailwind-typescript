@@ -15,11 +15,8 @@ const PageIntroduction = ({ projects }: PageIntroductionProps) => {
   const featuredProjects = orderedProjects.slice(0, 3)
 
   return (
-    <section className="relative flex min-h-[620px] w-full items-center overflow-hidden border-b border-zinc-800 px-5 pb-16 pt-32 lg:min-h-[680px] lg:pb-20">
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,9,11,0.86),rgba(9,9,11,0.98))]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(226,232,240,0.16),transparent_24rem),radial-gradient(circle_at_82%_18%,rgba(20,184,166,0.12),transparent_26rem)]" />
-      <div className="opacity-35 absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:72px_72px]" />
-      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-zinc-950 to-transparent" />
+    <section className="relative flex min-h-[620px] w-full items-center overflow-hidden border-b border-white/10 pb-16 pt-32 lg:min-h-[680px] lg:pb-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_22%,rgba(148,163,184,0.22),transparent_28rem)]" />
 
       <div className="container relative z-[1]">
         <div className="grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">

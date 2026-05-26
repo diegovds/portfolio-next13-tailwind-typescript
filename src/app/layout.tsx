@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { IBM_Plex_Mono, Sora } from 'next/font/google'
+import { Bricolage_Grotesque, JetBrains_Mono } from 'next/font/google'
 import { ReactNode } from 'react'
 import BackToTop from './components/BackToTop'
 import ContactForm from './components/ContactForm'
@@ -31,21 +31,24 @@ export const metadata: Metadata = {
   },
 }
 
-const sora = Sora({
-  variable: '--font-sora',
+const bricolage = Bricolage_Grotesque({
+  variable: '--font-sans',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
 })
 
-const plexMono = IBM_Plex_Mono({
-  variable: '--font-plex-mono',
+const jetBrainsMono = JetBrains_Mono({
+  variable: '--font-mono',
   subsets: ['latin'],
   weight: ['400', '500'],
 })
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${sora.variable} ${plexMono.variable}`}>
+    <html
+      lang="pt-BR"
+      className={`${bricolage.variable} ${jetBrainsMono.variable}`}
+    >
       <body>
         <Toaster />
         <BackToTop />

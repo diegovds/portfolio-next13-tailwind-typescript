@@ -21,7 +21,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       transition={{ duration: 0.5 }}
     >
       <motion.div
-        className="relative h-[210px] w-full overflow-hidden rounded-lg border border-white/10 bg-zinc-900 shadow-xl shadow-black/20 sm:h-[260px] lg:h-[250px]"
+        className="relative h-[210px] w-full overflow-hidden rounded-lg border border-zinc-100/10 bg-zinc-900 shadow-xl shadow-black/20 sm:h-[260px] lg:h-[250px]"
         initial={{ opacity: 0, y: 100, scale: 0.5 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.3, delay: 0.3 }}
@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           alt={`Thumbnail do projeto ${project.title}`}
           className="saturate-110 h-full w-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:saturate-150"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/55 via-transparent to-transparent" />
       </motion.div>
 
       <div className="flex flex-1 flex-col justify-center lg:py-3">
@@ -43,7 +43,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             {...fadeUpAnimation}
             transition={{ duration: 0.5 }}
           >
-            <span className="font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">
+            <span className="font-mono text-xs uppercase tracking-[0.24em] text-sky-200/45">
               projeto
             </span>
           </motion.div>
@@ -78,7 +78,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
         <Link
           href={`/projects/${project.slug}`}
-          className="mt-6 w-max rounded-full border border-white/10 px-4 py-2 hover:border-zinc-400/60"
+          className="mt-6 w-max rounded-full border border-zinc-100/10 px-4 py-2 hover:border-zinc-300/45"
         >
           Ver projeto
           <HiArrowNarrowRight />

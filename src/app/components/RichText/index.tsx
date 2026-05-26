@@ -19,7 +19,7 @@ const RichText = ({ ...props }: RichTextProps) => {
         a: ({ children, ...props }) => (
           <a
             {...props}
-            className="text-zinc-100 underline decoration-zinc-600 underline-offset-4 transition-colors hover:text-white hover:decoration-white"
+            className="text-zinc-100 underline decoration-zinc-300/35 underline-offset-4 transition-colors hover:text-zinc-50 hover:decoration-zinc-100"
           >
             {children}
           </a>

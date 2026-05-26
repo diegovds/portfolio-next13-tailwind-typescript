@@ -31,9 +31,9 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
       className="relative flex min-h-screen overflow-hidden bg-cover bg-center pb-14 pt-32 sm:pb-24 sm:pt-40"
       style={{ backgroundImage: `url(${pageThumbnail.url})` }}
     >
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,9,11,0.96),rgba(9,9,11,0.86)_46%,rgba(9,9,11,0.34)),linear-gradient(180deg,rgba(9,9,11,0.34),rgba(9,9,11,0.88))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,6,8,0.96),rgba(10,12,17,0.86)_46%,rgba(18,12,10,0.34)),linear-gradient(180deg,rgba(6,6,8,0.34),rgba(6,6,8,0.88))]" />
       <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-zinc-950 via-zinc-950/90 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 z-[2] h-px bg-zinc-800" />
+      <div className="absolute inset-x-0 bottom-0 z-[2] h-px bg-zinc-100/10" />
 
       <div className="container relative z-[1] flex items-center">
         <motion.div
@@ -44,7 +44,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         >
           <Link
             href="/projects"
-            className="mb-8 rounded-full border border-white/10 px-4 py-2"
+            className="mb-8 rounded-full border border-zinc-100/10 px-4 py-2"
           >
             <HiArrowNarrowLeft size={20} />
             Voltar para projetos
@@ -93,7 +93,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Button className="min-w-[190px] bg-zinc-900/90 text-zinc-100 hover:bg-zinc-800">
+                        <Button className="min-w-[190px] bg-zinc-900/90 text-zinc-100 hover:bg-zinc-800">
                         <FiGlobe size={20} />
                         Projeto Online
                       </Button>

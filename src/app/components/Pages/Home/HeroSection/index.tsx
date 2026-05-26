@@ -24,8 +24,8 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
   const featuredTechs = homeInfo.technologies.slice(0, 8)
 
   return (
-    <section className="relative flex w-full flex-col justify-center overflow-hidden border-b border-white/10 pb-14 pt-32 sm:pb-24 lg:min-h-[760px] lg:pt-40">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(148,163,184,0.22),transparent_25rem),radial-gradient(circle_at_18%_75%,rgba(100,116,139,0.1),transparent_24rem)]" />
+    <section className="relative flex w-full flex-col justify-center overflow-hidden border-b border-zinc-100/10 bg-[linear-gradient(135deg,#060608_0%,#0b0d12_48%,#111113_100%)] pb-14 pt-32 sm:pb-24 lg:min-h-[760px] lg:pt-40">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(161,161,170,0.16),transparent_25rem),radial-gradient(circle_at_18%_75%,rgba(125,211,252,0.08),transparent_24rem)]" />
 
       <div className="container relative z-[1]">
         <motion.div
@@ -34,10 +34,10 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="font-mono text-xs uppercase tracking-[0.32em] text-zinc-500">
+          <p className="font-mono text-xs uppercase tracking-[0.32em] text-zinc-300/60">
             Olá, meu nome é
           </p>
-          <h2 className="mt-4 max-w-[14ch] text-5xl font-semibold leading-none text-zinc-50 sm:text-6xl lg:text-8xl">
+          <h2 className="mt-4 max-w-[14ch] text-5xl font-bold leading-none text-zinc-50 sm:text-6xl lg:text-8xl">
             Diego Viana
           </h2>
 
@@ -46,8 +46,8 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
               <RichText content={homeInfo.introduction.raw} />
             </div>
 
-            <div className="lg:border-l lg:border-white/10 lg:pl-6">
-              <p className="font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">
+            <div className="lg:border-l lg:border-zinc-100/10 lg:pl-6">
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-sky-200/55">
                 stack principal
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -75,7 +75,7 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
                   href={contact.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-white/10 bg-zinc-900/70 p-2 transition-colors hover:text-zinc-100"
+                  className="rounded-full border border-zinc-100/10 bg-zinc-900/70 p-2 transition-colors hover:text-zinc-100"
                 >
                   <CMSIcon icon={contact.iconSvg} />
                 </a>

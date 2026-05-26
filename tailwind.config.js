@@ -7,14 +7,14 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['var(--font-sora)', 'sans-serif'],
+      sans: ['var(--font-sans)', 'sans-serif'],
     },
     extend: {
       fontFamily: {
-        mono: ['var(--font-plex-mono)', 'monospace'],
+        mono: ['var(--font-mono)', 'monospace'],
       },
       boxShadow: {
-        button: '0px 0px 68px 7px rgba(148, 163, 184, 0.22)',
+        button: '0px 0px 68px 7px rgba(161, 161, 170, 0.18)',
       },
     },
   },

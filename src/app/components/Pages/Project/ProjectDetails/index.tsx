@@ -93,7 +93,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                        <Button className="min-w-[190px] bg-zinc-900/90 text-zinc-100 hover:bg-zinc-800">
+                      <Button className="min-w-[190px] bg-zinc-900/90 text-zinc-100 hover:bg-zinc-800">
                         <FiGlobe size={20} />
                         Projeto Online
                       </Button>

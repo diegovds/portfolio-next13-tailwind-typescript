@@ -12,11 +12,11 @@ const KnownTech = ({ tech }: KnownTechProps) => {
     : undefined
 
   return (
-    <div className="group flex w-full flex-col justify-between rounded-lg border border-zinc-100/10 bg-zinc-950/45 p-5 shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-0.5 hover:border-zinc-300/35 hover:bg-zinc-900/60">
+    <div className="bg-zinc-950/45 hover:border-zinc-300/35 group flex w-full flex-col justify-between rounded-lg border border-zinc-100/10 p-5 shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-zinc-900/60">
       <div className="flex items-center justify-between gap-4">
         <p className="font-medium text-zinc-100">{tech.name}</p>
 
-        <span className="text-3xl text-sky-200/35 transition-colors duration-300 group-hover:text-zinc-100">
+        <span className="text-sky-200/35 text-3xl transition-colors duration-300 group-hover:text-zinc-100">
           <CMSIcon icon={tech.iconSvg} />
         </span>
       </div>

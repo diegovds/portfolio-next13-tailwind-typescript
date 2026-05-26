@@ -75,7 +75,7 @@ const PageIntroduction = ({ projects }: PageIntroductionProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.28 + index * 0.1 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/86 via-zinc-950/20 to-transparent" />
+                <div className="from-zinc-950/86 absolute inset-0 bg-gradient-to-t via-zinc-950/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <p className="line-clamp-1 text-sm font-medium text-zinc-100">
                     {project.title}
@@ -84,8 +84,8 @@ const PageIntroduction = ({ projects }: PageIntroductionProps) => {
               </motion.div>
             ))}
 
-            <div className="absolute bottom-7 right-0 rounded-xl border border-zinc-100/10 bg-zinc-950/72 px-5 py-4 shadow-xl shadow-black/30 backdrop-blur-md">
-              <p className="font-mono text-xs uppercase tracking-[0.24em] text-sky-200/45">
+            <div className="bg-zinc-950/72 absolute bottom-7 right-0 rounded-xl border border-zinc-100/10 px-5 py-4 shadow-xl shadow-black/30 backdrop-blur-md">
+              <p className="text-sky-200/45 font-mono text-xs uppercase tracking-[0.24em]">
                 acervo
               </p>
               <p className="mt-1 text-2xl font-semibold text-zinc-100">

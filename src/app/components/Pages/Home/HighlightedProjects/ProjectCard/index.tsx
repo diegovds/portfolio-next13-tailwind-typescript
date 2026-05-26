@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           alt={`Thumbnail do projeto ${project.title}`}
           className="saturate-110 h-full w-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:saturate-150"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/55 via-transparent to-transparent" />
+        <div className="from-zinc-950/55 absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
       </motion.div>
 
       <div className="flex flex-1 flex-col justify-center lg:py-3">
@@ -43,7 +43,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             {...fadeUpAnimation}
             transition={{ duration: 0.5 }}
           >
-            <span className="font-mono text-xs uppercase tracking-[0.24em] text-sky-200/45">
+            <span className="text-sky-200/45 font-mono text-xs uppercase tracking-[0.24em]">
               projeto
             </span>
           </motion.div>
@@ -78,7 +78,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
         <Link
           href={`/projects/${project.slug}`}
-          className="mt-6 w-max rounded-full border border-zinc-100/10 px-4 py-2 hover:border-zinc-300/45"
+          className="hover:border-zinc-300/45 mt-6 w-max rounded-full border border-zinc-100/10 px-4 py-2"
         >
           Ver projeto
           <HiArrowNarrowRight />

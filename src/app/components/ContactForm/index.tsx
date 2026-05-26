@@ -44,7 +44,7 @@ const ContactForm = () => {
       id="contact"
       className="relative flex items-center justify-center overflow-hidden border-t border-zinc-100/10 bg-[linear-gradient(145deg,#070709,#10131a_54%,#111113)] px-6 py-20 md:py-32"
     >
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-zinc-300/35 to-transparent" />
+      <div className="via-zinc-300/35 absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent" />
       <div className="mx-auto grid w-full max-w-5xl items-start gap-10 md:grid-cols-[0.9fr_1.1fr]">
         <SectionTitle
           subtitle="contato"
@@ -60,18 +60,18 @@ const ContactForm = () => {
         >
           <input
             placeholder="Nome"
-            className="h-14 w-full rounded-md border border-zinc-100/10 bg-zinc-950/80 p-4 text-zinc-50 outline-none ring-zinc-300/45 transition-all placeholder:text-zinc-600 focus:border-zinc-300/45 focus:ring-2"
+            className="ring-zinc-300/45 focus:border-zinc-300/45 h-14 w-full rounded-md border border-zinc-100/10 bg-zinc-950/80 p-4 text-zinc-50 outline-none transition-all placeholder:text-zinc-600 focus:ring-2"
             {...register('name')}
           />
           <input
             placeholder="E-mail"
             type="email"
-            className="h-14 w-full rounded-md border border-zinc-100/10 bg-zinc-950/80 p-4 text-zinc-50 outline-none ring-zinc-300/45 transition-all placeholder:text-zinc-600 focus:border-zinc-300/45 focus:ring-2"
+            className="ring-zinc-300/45 focus:border-zinc-300/45 h-14 w-full rounded-md border border-zinc-100/10 bg-zinc-950/80 p-4 text-zinc-50 outline-none transition-all placeholder:text-zinc-600 focus:ring-2"
             {...register('email')}
           />
           <textarea
             placeholder="Mensagem"
-            className="h-[150px] w-full resize-none rounded-md border border-zinc-100/10 bg-zinc-950/80 p-4 text-zinc-50 outline-none ring-zinc-300/45 transition-all placeholder:text-zinc-600 focus:border-zinc-300/45 focus:ring-2"
+            className="ring-zinc-300/45 focus:border-zinc-300/45 h-[150px] w-full resize-none rounded-md border border-zinc-100/10 bg-zinc-950/80 p-4 text-zinc-50 outline-none transition-all placeholder:text-zinc-600 focus:ring-2"
             maxLength={500}
             {...register('message')}
           />

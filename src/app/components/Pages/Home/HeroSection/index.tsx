@@ -47,7 +47,7 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
             </div>
 
             <div className="lg:border-l lg:border-zinc-100/10 lg:pl-6">
-              <p className="font-mono text-xs uppercase tracking-[0.24em] text-sky-200/55">
+              <p className="text-sky-200/55 font-mono text-xs uppercase tracking-[0.24em]">
                 stack principal
               </p>
               <div className="mt-4 flex flex-wrap gap-2">

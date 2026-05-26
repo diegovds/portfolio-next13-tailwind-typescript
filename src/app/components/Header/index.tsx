@@ -19,7 +19,7 @@ const NAV_ITEMS = [
 const Header = () => {
   return (
     <motion.header
-      className="fixed top-0 z-30 flex h-20 w-full items-center justify-center border-b border-zinc-100/10 bg-zinc-950/55 backdrop-blur-xl"
+      className="bg-zinc-950/55 fixed top-0 z-30 flex h-20 w-full items-center justify-center border-b border-zinc-100/10 backdrop-blur-xl"
       initial={{ top: -100 }}
       animate={{ top: 0 }}
       transition={{ duration: 0.5 }}

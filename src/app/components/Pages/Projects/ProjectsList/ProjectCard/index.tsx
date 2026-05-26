@@ -10,7 +10,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const technologies = project.technologies.map((x) => x.name).join(', ')
 
   return (
-    <article className="group flex h-[430px] flex-col overflow-hidden rounded-lg border border-zinc-100/10 bg-zinc-950/45 shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-300/35 hover:bg-zinc-900/60 hover:shadow-2xl hover:shadow-black/25">
+    <article className="bg-zinc-950/45 hover:border-zinc-300/35 group flex h-[430px] flex-col overflow-hidden rounded-lg border border-zinc-100/10 shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-900/60 hover:shadow-2xl hover:shadow-black/25">
       <div className="relative h-52 w-full overflow-hidden border-b border-zinc-100/10 bg-zinc-950">
         <Image
           width={420}
@@ -24,7 +24,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
 
       <div className="flex flex-1 flex-col p-5">
-        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-sky-200/45">
+        <span className="text-sky-200/45 font-mono text-[10px] uppercase tracking-[0.22em]">
           projeto
         </span>
 

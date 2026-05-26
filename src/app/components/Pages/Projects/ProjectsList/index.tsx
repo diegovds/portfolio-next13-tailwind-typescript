@@ -14,7 +14,10 @@ const ProjectsList = ({ projects }: ProjectsListProps) => {
   const orderedProjects = [...projects].sort((a, b) => a.order - b.order)
 
   return (
-    <section className="container grid grid-cols-1 gap-4 py-16 sm:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] md:py-24">
+    <section
+      id="projects-list"
+      className="container grid grid-cols-1 gap-4 py-16 sm:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] md:py-24"
+    >
       {orderedProjects.map((project, index) => (
         <motion.div
           key={index}

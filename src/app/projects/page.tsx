@@ -36,7 +36,7 @@ const Projects = async () => {
 
   return (
     <>
-      <PageIntroduction />
+      <PageIntroduction projects={projects} />
       <ProjectsList projects={projects} />
     </>
   )

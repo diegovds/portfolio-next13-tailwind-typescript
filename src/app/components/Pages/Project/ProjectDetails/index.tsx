@@ -28,7 +28,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
 
   return (
     <section
-      className="relative flex min-h-screen overflow-hidden bg-cover bg-center px-6 pb-14 pt-32 sm:pb-24 sm:pt-40"
+      className="relative flex min-h-screen overflow-hidden bg-cover bg-center pb-14 pt-32 sm:pb-24 sm:pt-40"
       style={{ backgroundImage: `url(${pageThumbnail.url})` }}
     >
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,9,11,0.96),rgba(9,9,11,0.86)_46%,rgba(9,9,11,0.34)),linear-gradient(180deg,rgba(9,9,11,0.34),rgba(9,9,11,0.88))]" />

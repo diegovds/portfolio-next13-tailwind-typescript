@@ -4,7 +4,7 @@ import Link from '@/app/components/Link'
 import SectionTitle from '@/app/components/SectionTitle'
 import { Project } from '@/types/Projects'
 import { motion } from 'framer-motion'
-import { HiArrowNarrowLeft, HiArrowNarrowRight } from 'react-icons/hi'
+import { HiArrowNarrowLeft } from 'react-icons/hi'
 
 type PageIntroductionProps = {
   projects: Project[]
@@ -49,16 +49,6 @@ const PageIntroduction = ({ projects }: PageIntroductionProps) => {
                 mostram decisões de arquitetura, experiência de uso e cuidado
                 com entrega.
               </p>
-
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href="#projects-list"
-                  className="min-h-12 border-white/15 inline-flex items-center justify-center gap-2 rounded-md border bg-[linear-gradient(135deg,#fafafa,#cbd5e1)] px-5 py-3 text-sm font-medium text-zinc-950 shadow-xl shadow-black/30 transition-all hover:-translate-y-0.5 hover:shadow-white/10"
-                >
-                  Ver projetos
-                  <HiArrowNarrowRight size={20} />
-                </a>
-              </div>
             </motion.div>
           </div>
 

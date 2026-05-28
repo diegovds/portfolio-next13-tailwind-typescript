@@ -82,7 +82,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: 'Home',
-    description: `Olá, meu nome é Diego Viana ${pageData.introduction.text
+    description: `${pageData.introduction.text
       .replace(/\\n/g, '')
       .replace('S', 's')}`,
   }

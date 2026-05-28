@@ -35,6 +35,7 @@ const bricolage = Bricolage_Grotesque({
   variable: '--font-sans',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
+  adjustFontFallback: false,
 })
 
 const jetBrainsMono = JetBrains_Mono({

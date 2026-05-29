@@ -30,7 +30,7 @@ const Header = () => {
             width={48}
             height={41}
             src="/images/icons/project-title-icon.svg"
-            alt="Logo Diego Dev"
+            alt="Logo Diego Viana"
             priority
             className="drop-shadow-[0_0_18px_rgba(161,161,170,0.26)]"
           />

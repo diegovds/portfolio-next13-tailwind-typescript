@@ -5,7 +5,7 @@ import Button from './components/Button'
 const NotFound = () => {
   return (
     <>
-      <title>Página não encontrada | Diego Dev</title>
+      <title>Página não encontrada | Diego Viana</title>
       <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
       <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(113,113,122,0.2),transparent_30rem)]" />

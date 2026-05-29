@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATABASE!),
   title: {
     default: 'Home',
-    template: '%s | Diego Dev',
+    template: '%s | Diego Viana',
   },
   icons: [
     {
